@@ -1,4 +1,4 @@
-package com.tutorial.main;
+package com.abystu.main;
 
 import java.awt.AlphaComposite;
 import java.awt.Color;

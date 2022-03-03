@@ -1,4 +1,4 @@
-package com.tutorial.main;
+package com.abystu.main;
 
 import java.awt.Canvas;
 import java.awt.Color;
@@ -40,8 +40,9 @@ public class Game extends Canvas implements Runnable {
         menu = new Menu(this, handler, hud);
     	this.addKeyListener(new KeyInput(handler));
     	this.addMouseListener(menu);
+    	Color col = new Color(16,16,16);
     	background1 =  createBackground(WIDTH, HEIGHT, Color.black);
-    	background2 = createBackground(WIDTH, HEIGHT, 100, 100, Color.cyan, Color.black);
+    	background2 = createBackground(WIDTH, HEIGHT, 100, 100, col, Color.black);
     	
     	new Window(WIDTH, HEIGHT, "LET'S BUILD A GAME", this);
     	

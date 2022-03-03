@@ -1,4 +1,4 @@
-package com.tutorial.main;
+package com.abystu.main;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -6,7 +6,7 @@ import java.awt.Graphics;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-import com.tutorial.main.Game.STATE;
+import com.abystu.main.Game.STATE;
 
 public class Menu extends MouseAdapter {
 	
@@ -27,7 +27,7 @@ public class Menu extends MouseAdapter {
 		if(mouseOver(mx, my, 450, 350, 400, 100)) {
 			game.gameState = STATE.Game;
 
-            handler.addObject(new Player(100, 100, ID.Player, handler));
+            handler.addObject(new Player(600, 450, ID.Player, handler));
 		}else if(mouseOver(mx, my, 450, 500, 400, 100)) {
 			game.gameState = STATE.Help;
 		}else if(mouseOver(mx, my, 450, 650, 400, 100)) {
@@ -79,7 +79,7 @@ public class Menu extends MouseAdapter {
 			g.setFont(fnt);
 			g.drawString("Game", 350, 200);
 			g.drawString("Over", 350, 300);
-			g.drawString("Game", 350, 200);
+			g.drawString("" + hud.getScore(), 350, 200);
 		
 		}
 	}
